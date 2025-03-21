@@ -8,9 +8,9 @@ const ShopFooter = () => {
       <div className="useful-links">
         <h2 className="logo-text">LOGO</h2>
         <ul className="useful-details">
-          <li>+233 xxx xxx xxx</li>
-          <li>Location: xx, xxx</li>
-          <li>Socials</li>
+          <li>09123456789</li>
+          <li>Location: University of Cabuyao</li>
+          <li>farmhub.com</li>
         </ul>
       </div>
 
