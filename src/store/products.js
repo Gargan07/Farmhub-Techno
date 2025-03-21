@@ -1,6 +1,60 @@
 import { useReducer, useEffect } from "react";
 import { toast } from "react-toastify";
 
+// Default fresh produce products
+const defaultProducts = [
+  {
+    _id: "1",
+    name: "Fresh Organic Carrots",
+    description: "Sweet and crunchy farm-fresh organic carrots.",
+    price: 3,
+    rating: 5,
+    product_image: "/assets/images/carrots.jpg",
+    addedToCart: false,
+  },
+  {
+    _id: "2",
+    name: "Juicy Red Apples",
+    description: "Crisp and juicy apples, rich in flavor and nutrients.",
+    price: 5,
+    rating: 4,
+    product_image: "/assets/images/apples.jpg",
+    addedToCart: false,
+  },
+  {
+    _id: "3",
+    name: "Organic Broccoli",
+    description: "Freshly picked green broccoli, packed with vitamins.",
+    price: 4,
+    rating: 5,
+    product_image: "/assets/images/broccoli.jpg",
+    addedToCart: false,
+  },
+  {
+    _id: "4",
+    name: "Farm Fresh Tomatoes",
+    description: "Ripe, juicy tomatoes straight from the farm.",
+    price: 6,
+    rating: 4,
+    product_image: "/assets/images/tomatoes.jpg",
+    addedToCart: false,
+  },
+  {
+    _id: "5",
+    name: "Sweet Bananas",
+    description: "Perfectly ripe bananas, great for snacks or smoothies.",
+    price: 2,
+    rating: 5,
+    product_image: "/assets/images/bananas.jpg",
+    addedToCart: false,
+  },
+];
+
+// Initialize products in localStorage if empty
+if (!localStorage.getItem("products")) {
+  localStorage.setItem("products", JSON.stringify(defaultProducts));
+}
+
 const initialState = {
   products: JSON.parse(localStorage.getItem("products")) || [],
   cart: JSON.parse(localStorage.getItem("cart")) || [],
