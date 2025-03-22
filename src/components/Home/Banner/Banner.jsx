@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import girlHeadphones from "@/assets/images/girl_headphones.png";
+import farmer from "@/assets/images/farmer.png";
 import "./Banner.css";
 
 const Banner = () => {
@@ -8,7 +8,7 @@ const Banner = () => {
       <div className="banner">
         <div className="banner-text">
           <h1>
-            Grab up to 50% off on <br /> selected Headphones
+            Grab up to 50% off on <br /> selected Produce
           </h1>
           <span className="is-buy-now">
             <Link to="/products">
@@ -17,7 +17,7 @@ const Banner = () => {
           </span>
         </div>
         <div className="subject">
-          <img src={girlHeadphones} alt="Girl wearing headphones" width="100%" />
+          <img src={farmer} alt="farmer" width="100%" />
         </div>
       </div>
     </div>
